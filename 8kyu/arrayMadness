@@ -1,0 +1,18 @@
+ // Objective
+// Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares
+//  of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+//PREP
+
+//Parameters = a and b
+//example and return  = compareSumsOfSquaresAndCubes([1, 2, 3], [1, 2, 3]) would return false
+//  compareSumsOfSquaresAndCubes([5, 3, 2], [1, 1]) would return true
+
+
+//Solution
+
+function arrayMadness(a, b) {
+    const sumOfSquaresOfA = a.reduce((acc,num)=>acc+num*num,0)
+    const sumOfCubeOfB = b.reduce((acc,num)=>acc+num*num*num,0)
+    return sumOfSquaresOfA > sumOfCubeOfB
+  }
